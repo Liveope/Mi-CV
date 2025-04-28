@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mi CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="text-size-buttons">
+    <button onclick="cambiarTamañoLetra(1)">A+</button>
+    <button onclick="cambiarTamañoLetra(-1)">A-</button>
+  </div>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="WhatsApp Image 2025-04-27 at 21.22.07.jpeg" alt="shaif arfan">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_firstName">Vicente Andrés</span>
+            <span class="profile_name_lastName">Campos Rodriguez</span>
+          </h1>
+          <p class="profile_title">Ingeniero en informatica</p>
+          <p class="description profile_description">
+            Estudio ingeniería en Informática, me interesan las áreas de Ciberseguridad, soy entusiasta y siempre quiero aprender más.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Habilidades Técnicas</h3>
+        <ul class="skills_list description">
+          <li>Python Básico</li>
+          <li>CSS y HTML Básico</li>
+          <h3 class="title">Habilidades Blandas</h3>
+          <li>Comunicación efectiva</li>
+          <li>Liderazgo</li>
+          <li>Cooperativo</li>
+        </ul>
+      </div>
+      <div class="certification">
+        <h3 class="title">Certificaciones</h3>
+        <div class="certification_item">
+          <p class="item_preTitle">2024</p>
+          <li class="item_title">Introducción a la nube (AWS Academy)</li>
+          <li class="item_title">Introducción a Python (Santander Open Academy)</li>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">Experiencia Académica</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">📍 Santiago, Chile | 📅 Marzo 2024 – Mayo 2024</p>
+          <h4 class="item_title">Desarrollador – Sistema de Riego Automático</h4>
+          <p class="description">
+            Diseñé y desarrollé una página web sobre un sistema de riego automático utilizando sensores y Arduino.
+          </p>
+        </div>
+        <div class="exp_item">
+          <p class="item_preTitle">📍 Santiago, Chile | 📅 Abril 2024 – Junio 2024</p>
+          <h4 class="item_title">Desarrollador – Simulador de Metro con Dijkstra</h4>
+          <p class="description">
+            Implementé un algoritmo para calcular la ruta más rápida entre estaciones del metro de Santiago.
+          </p>
+        </div>
+      </div>
+      <div class="awards">
+        <h3 class="title">Idiomas</h3>
+        <div class="awards_item">
+          <li class="item_title">Español Nativo</li>
+          <li class="item_title">Inglés A2 (Pre-intermedio)</li>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contacto</h3>
+        <div class="contact_info">
+          <p class="description">
+            Santiago, Chile
+          </p>
+          <br>
+          <a class="linkedin" href="https://www.linkedin.com/in/vicente-campos-rodriguez" target="_blank">Linkedin</a>
+          <p class="description">
+            +56 9 **** ****
+          </p>
+          <p class="description">
+            vicente.campos.rz@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let tamañoLetraActual = 16; // Tamaño de letra inicial en px
+
+    // Función para cambiar el tamaño de letra de todos los textos
+    function cambiarTamañoLetra(cambio) {
+      tamañoLetraActual += cambio;
+
+      // Limita el tamaño de la letra
+      if (tamañoLetraActual < 10) tamañoLetraActual = 10;
+      if (tamañoLetraActual > 30) tamañoLetraActual = 30;
+
+      // Aplica el nuevo tamaño de letra a todos los elementos de texto
+      const elementosTexto = document.querySelectorAll('h1, h2, h3, h4, p, li');
+      elementosTexto.forEach(elemento => {
+        elemento.style.fontSize = tamañoLetraActual + 'px';
+      });
+    }
+  </script>
+</body>
+
+</html>
